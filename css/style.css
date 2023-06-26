@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1140px;
+}
+body{
+	background-color: rgb(52, 45, 45);
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	margin: 7px 0;
+	align-items: center;
+	margin-bottom: 10%;
+}
+header h1{
+	color: white;
+}
+nav{
+	margin-top: 200px;
+}
+nav ul{
+	display: flex;
+	border-bottom: 3px solid white;
+	width: 450px;
+}
+nav ul li{
+	list-style: none;
+	margin: 0 10px;
+	width: 70px;
+	height: 70px;
+	background: red;
+	border-radius: 50%;
+	position: relative;
+	animation: bouncy 1.5s linear infinite;
+}
+nav ul:hover li{
+	animation-play-state: paused;
+}
+nav ul li a{
+	text-decoration: none;
+	padding: 15px;
+	position: absolute;
+	top: 15%;
+	left: 0%;
+	color: white;
+	text-shadow: 0px 0px 10px #00b3ff,
+				 0px 0px 30px #00b3ff,
+				 0px 0px 60px #00b3ff,
+				 0px 0px 90px #00b3ff;
+}
+
+section h1, h3{
+	color: transparent;
+	font-family:'Righteous', cursive;
+	font-size: 40px;
+	margin: 5px;
+	position: relative;
+	display: block;
+	animation: text_reveal .5s ease forwards;
+	animation-delay: 1.5s;
+
+
+}
+section h1:nth-child(1){
+	animation-delay: 1.5s;
+}
+section h1:nth-child(2){
+	animation-delay: 2.5s;
+}
+section h1 span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0px;
+	background: crimson;
+	animation: text 1s ease ;
+	animation-delay: 1s;
+}
+section h1:nth-child(1) span{
+	animation-delay: 1s;
+}
+section h1:nth-child(2) span{
+	animation-delay: 2s;
+}
+
+section h3{
+	font-family: 'Caveat', cursive;
+	color: white;
+}
+section p{
+	color: white;
+	line-height: 25px;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 15px;
+	text-shadow: 3px 0px 10px #00b3ff,
+				 3px 0px 20px #00b3ff,
+				 3px 0px 40px #00b3ff,
+				 3px 0px 60px #00b3ff;
+}
+
+
+
+
+
+
+
+
+
+@keyframes bouncy{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(-150px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
+ul li:nth-child(1){
+	animation-delay: 0.2s;
+}
+ul li:nth-child(2){
+	animation-delay: 0.6s;
+}
+ul li:nth-child(3){
+	animation-delay: 0.4s;
+}
+ul li:nth-child(4){
+	animation-delay: 0.8s;
+}
+
+
+@keyframes text{
+
+	50%{
+		width: 300px;
+		left: 0;
+	}
+	100%{
+		width: 0;
+		left: 300px;
+	}
+
+
+}
+@keyframes text_reveal{
+	100%{
+		color: white;
+		text-shadow: 3px 0px 10px #00b3ff,
+				 3px 0px 20px #00b3ff,
+				 3px 0px 40px #00b3ff,
+				 3px 0px 60px #00b3ff;
+
+	}
+}
